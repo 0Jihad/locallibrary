@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h6>Author's Reviews</h6>
+  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The Author has the following books:</p>
+    {% for authors in author %}
+        <ul>
+             <li>
+                 <a href="{% url 'books' %}"><strong>{{ authors.title }}</a>
+             </li>
+        </ul>
+    {% endfor %}
+{% endblock %}
